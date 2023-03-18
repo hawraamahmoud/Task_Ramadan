@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".MainActivity"
+    app:layoutDescription="@xml/activity_main_scene">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_constraint"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ramadan"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_constraint"
+        app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+        app:layout_constraintStart_toStartOf="@+id/main_constraint"
+        app:layout_constraintTop_toTopOf="@+id/main_constraint"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ramadanka" />
+
+        <TextView
+            android:id="@+id/iftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="@string/iftar_time_7_00_pm"
+            android:textColor="@color/textColor"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@id/main_constraint"
+            app:layout_constraintStart_toStartOf="@+id/ramadan"
+            app:layout_constraintTop_toBottomOf="@+id/ramadan" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="71dp"
+            app:layout_constraintEnd_toEndOf="@+id/main_constraint"
+            app:layout_constraintStart_toStartOf="@+id/main_constraint"
+            app:layout_constraintTop_toTopOf="@+id/iftar"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/swipe" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
