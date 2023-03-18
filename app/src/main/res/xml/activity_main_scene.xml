@@ -4,27 +4,92 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@+id/main_constraint"
+            android:id="@+id/ramadan"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="320dp"
+            android:layout_marginBottom="72dp"
+            android:alpha="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ramadanka" />
+        <Constraint
+            android:id="@+id/iftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:alpha="1"
+            android:text="@string/iftar_time_7_00_pm"
+            android:textColor="@color/textColor"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ramadan"
+            app:layout_constraintTop_toBottomOf="@+id/ramadan"/>
+        <Constraint
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="71dp"
+            android:alpha="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iftar"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/swipe"/>
 
-         />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@+id/main_constraint"
+            android:id="@+id/ramadan"
+            android:layout_width="wrap_content"
+            android:layout_height="320dp"
+            android:layout_marginBottom="72dp"
+            android:alpha="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ramadanka" />
+        <Constraint
+            android:id="@+id/iftar"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:alpha="0"
+            android:text="@string/iftar_time_7_00_pm"
+            android:textColor="@color/textColor"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ramadan"
+            app:layout_constraintTop_toBottomOf="@+id/ramadan"/>
 
-         app:layout_constraintVertical_bias="0.1"/>
+        <Constraint
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="71dp"
+            android:alpha="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iftar"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/swipe"/>
     </ConstraintSet>
 
     <Transition
         app:constraintSetEnd="@id/end"
 
-        app:constraintSetStart="@+id/start" android:id="@id/main_constraint">
+        app:constraintSetStart="@+id/start" android:id="@id/end">
         <OnSwipe app:dragDirection="dragUp"
-            app:touchAnchorId="@id/main_constraint"/>
+            app:touchAnchorId="@id/ramadan"/>
     </Transition>
 </MotionScene>
