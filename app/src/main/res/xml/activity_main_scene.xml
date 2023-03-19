@@ -25,7 +25,7 @@
             android:alpha="1"
             android:text="@string/iftar_time_7_00_pm"
             android:textColor="@color/textColor"
-            android:textSize="22sp"
+            android:textSize="@dimen/text_Size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/ramadan"
             app:layout_constraintTop_toBottomOf="@+id/ramadan"/>
@@ -91,7 +91,7 @@
             android:alpha="0"
             android:text="@string/iftar_time_7_00_pm"
             android:textColor="@color/textColor"
-            android:textSize="22sp"
+            android:textSize="@dimen/text_Size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/ramadan"
             app:layout_constraintTop_toBottomOf="@+id/ramadan"/>

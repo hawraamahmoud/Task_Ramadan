@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Task_Ramadan</string>
-    <string name="iftar_time_7_00_pm">Iftar Time 7:00 PM</string>
+    <string name="iftar_time_7_00_pm">Iftar Time 7:10 PM</string>
+    <string name="prayer_time_in_baghdad">Prayer Time In Baghdad</string>
+
 </resources>
